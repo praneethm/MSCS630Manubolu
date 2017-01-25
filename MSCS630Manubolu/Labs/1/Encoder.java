@@ -17,6 +17,11 @@ public class Encoder {
   private static char[] rawData;
   private static ArrayList<String> holder = new ArrayList<String>();
 
+  /**
+   *init
+   *
+   *This methods creates a hashmap to store one to one relationship
+   */
   public static void init() {
     encode = new HashMap();
     encode.put('a', 0);
@@ -73,7 +78,15 @@ public class Encoder {
       System.out.println();
       }
 }
-//
+  /**
+   *str2int
+   *
+   *This methods has the encoder converting alphabets to int
+   *Parameters
+   *  palinText - input
+   *  encodedLine - int ArrayList for processing and adding converted data
+   *  line - encoded line data with spaces
+   */
   public static int[] str2int(String plainText){
   //int[] encodedLine = new int[50];
   ArrayList<Integer> encodedLine = new ArrayList<Integer>();
