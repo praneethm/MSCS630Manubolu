@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/commons-codec-1.10-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/commons-codec-1.10-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/commons-codec-1.10-tests.jar"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/commons-codec-1.10-test-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/local_policy.jar"/>
+	<classpathentry kind="lib" path="D:/Preetham/Library/US_export_policy.jar"/>
+	<classpathentry kind="lib" path="D:/Marist/Project/HYMN-android/libs/commons-codec-1.10.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

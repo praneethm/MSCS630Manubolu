@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Jars/mysql-connector-java-5.1.29-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Jars/asm-1.0-RC3.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/asm-3.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/json-smart-2.0-RC3.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/mina/mina-core.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/mina/mina-filter-compression.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/mina/mina-integration-beans.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/mina/mina-integration-jmx.jar"/>
+	<classpathentry kind="lib" path="D:/Jars/mina/mina-integration-ognl.jar"/>
+	<classpathentry kind="lib" path="D:/Marist/Assignments/Software Development/charlie/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="D:/Marist/Assignments/Software Development/charlie/slf4j-simple-1.7.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

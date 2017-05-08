@@ -1,0 +1,15 @@
+---------------------------------------------------------------------
+Author - Praneeth Manubolu
+Applicaiton - Android Jabber
+Project type - Eclipse Java Project (chat-Trail) & Eclispe Android Project (HYMN-android)
+
+
+
+
+Project : chat-trail 
+1) Simple Eclipse project
+
+Project : HYMN-android
+1) have to install adt plugin(depricated)
+2) Can use emulator or android devices
+
