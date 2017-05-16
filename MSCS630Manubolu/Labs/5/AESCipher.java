@@ -120,7 +120,7 @@ public class AESCipher {
       }
       pointer += 4;
     }
-    
+
     return output;
   }
 
@@ -136,7 +136,6 @@ public class AESCipher {
           outStateHex[i][j] = temp;
         }
       }
-
 
     }
 
@@ -200,11 +199,11 @@ public class AESCipher {
       for (int y = 0; y < 4; y++) {
 
         one[i][y] = Integer.parseInt(inStateHex[i][y], 16);
-        
+
       }
     }
 
-    return MyMatrix.multiplicar(mat, one);
+    return new MyMatrix().multiplicar(mat, one);
 
   }
 
@@ -255,6 +254,68 @@ public class AESCipher {
       }
     }
     return temp;
+
+  }
+
+  public static class MyMatrix {
+
+    public String[][] multiplicar(int[][] A, int[][] B) {
+
+      int aRows = A.length;
+      int aColumns = A[0].length;
+      int bRows = B.length;
+      int bColumns = B[0].length;
+
+      if (aColumns != bRows) {
+        throw new IllegalArgumentException("A:Rows: " + aColumns + " did not match B:Columns " + bRows + ".");
+      }
+
+      int[][] C = new int[aRows][bColumns];
+      String[][] output = new String[aRows][bColumns];
+      for (int i = 0; i < aRows; i++) {
+        for (int j = 0; j < bColumns; j++) {
+          C[i][j] = 0;
+        }
+      }
+
+      for (int i = 0; i < aRows; i++) { // aRow
+        for (int j = 0; j < bColumns; j++) { // bColumn
+          for (int k = 0; k < aColumns; k++) { // aColumn
+            //System.out.println("multypling "+Integer.toHexString(A[i][k])+" and "+Integer.toHexString(B[k][j]));
+            char x, y;
+            if (Integer.toHexString(B[k][j]).length() < 2) {
+              x = '0';
+              y = Integer.toHexString(B[k][j]).charAt(0);
+            } else {
+              x = Integer.toHexString(B[k][j]).charAt(0);
+              y = Integer.toHexString(B[k][j]).charAt(1);
+            }
+            //System.out.println("x "+x+"y "+y);
+            if (A[i][k] == 2) {
+              C[i][j] ^= MCTables.mc2[Character.getNumericValue(x)][Character.getNumericValue(y)];
+            }
+            if (A[i][k] == 3) {
+              C[i][j] ^= MCTables.mc3[Character.getNumericValue(x)][Character.getNumericValue(y)];
+            }
+            if (A[i][k] == 1) {
+              C[i][j] ^= B[k][j];
+            }
+
+          }
+          // System.out.print(Integer.toHexString(C[i][j])+" ");
+          String temp = Integer.toHexString(C[i][j]).toUpperCase();
+          if (temp.length() < 2) {
+            output[i][j] = "0" + temp;
+          } else {
+            output[i][j] = temp;
+          }
+          //System.out.print(output[i][j]+" ");
+        }
+        //System.out.println("");
+      }
+
+      return output;
+    }
 
   }
 
